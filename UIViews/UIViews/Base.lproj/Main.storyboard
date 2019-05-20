@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkJ-Zm-DPk">
+                                <rect key="frame" x="16" y="20" width="343" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="J0s-x8-lDt"/>
+                                </constraints>
+                                <state key="normal" title="Show me the view!"/>
+                                <connections>
+                                    <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sli-sl-5hC"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QkH-MD-FZR" userLabel="SubView">
+                                <rect key="frame" x="16" y="116" width="343" height="216"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The Subview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rng-hj-dLl">
+                                        <rect key="frame" x="8" y="8" width="327" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="qVu-Yt-058"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLP-5l-mGC">
+                                        <rect key="frame" x="8" y="173" width="327" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="N6n-T6-g7B"/>
+                                        </constraints>
+                                        <state key="normal" title="Exit View">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hideView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xTp-I6-fQb"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VMT-if-Cfy">
+                                        <rect key="frame" x="8" y="54" width="327" height="111"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="DLP-5l-mGC" firstAttribute="leading" secondItem="QkH-MD-FZR" secondAttribute="leading" constant="8" id="5zQ-Gk-eKA"/>
+                                    <constraint firstItem="Rng-hj-dLl" firstAttribute="top" secondItem="QkH-MD-FZR" secondAttribute="top" constant="8" id="JE8-zk-L1S"/>
+                                    <constraint firstAttribute="trailing" secondItem="VMT-if-Cfy" secondAttribute="trailing" constant="8" id="Jkb-eZ-Pe4"/>
+                                    <constraint firstItem="VMT-if-Cfy" firstAttribute="leading" secondItem="QkH-MD-FZR" secondAttribute="leading" constant="8" id="L72-bI-nZx"/>
+                                    <constraint firstItem="DLP-5l-mGC" firstAttribute="top" secondItem="VMT-if-Cfy" secondAttribute="bottom" constant="8" id="MS8-he-f9z"/>
+                                    <constraint firstItem="VMT-if-Cfy" firstAttribute="top" secondItem="Rng-hj-dLl" secondAttribute="bottom" constant="8" id="PAZ-mN-2Jm"/>
+                                    <constraint firstItem="Rng-hj-dLl" firstAttribute="leading" secondItem="QkH-MD-FZR" secondAttribute="leading" constant="8" id="PJZ-0P-kOu"/>
+                                    <constraint firstAttribute="trailing" secondItem="DLP-5l-mGC" secondAttribute="trailing" constant="8" id="ZY0-qg-DMn"/>
+                                    <constraint firstAttribute="width" secondItem="QkH-MD-FZR" secondAttribute="height" multiplier="343:216" id="dDe-Jm-NyH"/>
+                                    <constraint firstAttribute="bottom" secondItem="DLP-5l-mGC" secondAttribute="bottom" constant="8" id="o6e-Pc-fwu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rng-hj-dLl" secondAttribute="trailing" id="oAv-Hl-w1h"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QkH-MD-FZR" firstAttribute="top" secondItem="wkJ-Zm-DPk" secondAttribute="bottom" constant="8" id="CIm-kj-tZL"/>
+                            <constraint firstItem="wkJ-Zm-DPk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HDf-eM-7iz"/>
+                            <constraint firstItem="wkJ-Zm-DPk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tac-mb-47m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QkH-MD-FZR" secondAttribute="trailing" constant="16" id="cQr-iZ-riG"/>
+                            <constraint firstItem="QkH-MD-FZR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ktH-eD-WrJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wkJ-Zm-DPk" secondAttribute="trailing" constant="16" id="r8j-x7-I5k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="theView" destination="QkH-MD-FZR" id="pHm-X8-Bux"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
