@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wbC-5x-jTD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cn3-gy-NBB">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Standard" id="68j-4X-IKQ">
+                                        <connections>
+                                            <action selector="standard:" destination="BYZ-38-t0r" id="OoG-Bf-uNh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Satelite" id="eFd-TC-VLm">
+                                        <connections>
+                                            <action selector="satelite:" destination="BYZ-38-t0r" id="cdy-RJ-Ddw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Hybrid" id="evX-2W-JcQ">
+                                        <connections>
+                                            <action selector="hybrid:" destination="BYZ-38-t0r" id="0vv-uN-sHy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="K1h-Gw-l7N"/>
+                                    <barButtonItem title="Locate" id="yqd-dQ-QUL">
+                                        <connections>
+                                            <action selector="locate:" destination="BYZ-38-t0r" id="MvK-L5-NL3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UYp-0g-Uux">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cn3-gy-NBB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5Zm-Dh-8du"/>
+                            <constraint firstItem="UYp-0g-Uux" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DOu-yN-p07"/>
+                            <constraint firstItem="Cn3-gy-NBB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RJx-za-cqA"/>
+                            <constraint firstItem="Cn3-gy-NBB" firstAttribute="top" secondItem="UYp-0g-Uux" secondAttribute="bottom" id="cVA-c3-6UX"/>
+                            <constraint firstItem="Cn3-gy-NBB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="di4-ne-vnx"/>
+                            <constraint firstItem="UYp-0g-Uux" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fcK-wH-ZxF"/>
+                            <constraint firstItem="UYp-0g-Uux" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pd4-ac-ac0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map View" id="L8o-48-MFg">
+                        <barButtonItem key="rightBarButtonItem" title="Directions" id="yv3-aT-Rqz">
+                            <connections>
+                                <action selector="directions:" destination="BYZ-38-t0r" id="SQ6-Ld-jL3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="UYp-0g-Uux" id="z3P-xj-grM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650.39999999999998" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MWq-zL-41m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wbC-5x-jTD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aOS-Ml-FEf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="22"/>
+                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uV9-6c-zEW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ucp-ri-EYC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-108" y="133"/>
+        </scene>
+    </scenes>
+</document>
